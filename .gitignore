@@ -1,0 +1,15 @@
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDE/Editor specific
+.vscode/
+.idea/
+
+# Log files
+*.log
+
+# Environment variables (if you ever add them)
+.env
+*.env.*
+!.env.example

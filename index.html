@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pitmaster's Secret - Authentic Texas-style Smokehouse Experience</title>
+    <meta name="description" content="The Pitmaster's Secret - Authentic Texas-style smokehouse serving mouth-watering ribs and homestyle sides since 1985. Visit us in BBQ Town or order online.">
+    <meta name="keywords" content="BBQ, barbecue, smoked meats, ribs, Texas BBQ, restaurant, BBQ Town">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="The Pitmaster's Secret - Authentic Smokehouse Experience">
+    <meta property="og:description" content="Mouth-watering, slow-smoked meats and homestyle sides that will transport you to BBQ heaven.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+    <meta property="og:url" content="https://pitmasterssecret.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Pitmaster's Secret - Authentic Smokehouse Experience">
+    <meta name="twitter:description" content="Mouth-watering, slow-smoked meats and homestyle sides that will transport you to BBQ heaven.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pitmasterssecret.com">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="pt-16">
+    <!-- Loading Screen -->
+    <div class="loading-container" id="loading-screen">
+        <div class="loading-logo">The Pitmaster's Secret</div>
+        <div class="loading-bar">
+            <div class="loading-progress" id="loading-progress"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="brand-font text-3xl bbq-primary-text" id="brand-logo">The Pitmaster's Secret</div>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#home" class="font-medium hover:text-red-600 transition-colors nav-item">Home</a>
+                    <a href="#about" class="font-medium hover:text-red-600 transition-colors nav-item">Our Story</a>
+                    <a href="#menu" class="font-medium hover:text-red-600 transition-colors nav-item">Menu</a>
+                    <a href="gallery-slideshow.html" class="font-medium hover:text-red-600 transition-colors nav-item">Gallery</a>
+                    <a href="#contact" class="font-medium hover:text-red-600 transition-colors nav-item">Contact</a>
+                    <a href="#order" class="bg-red-600 text-white px-4 py-2 rounded-md font-medium hover:bg-red-700 transition-colors button-hover-animation">Order Now</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-800">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden py-4 px-4" id="mobile-menu">
+        <div class="flex flex-col space-y-4">
+            <a href="#home" class="font-medium hover:text-red-600 transition-colors">Home</a>
+            <a href="#about" class="font-medium hover:text-red-600 transition-colors">Our Story</a>
+            <a href="#menu" class="font-medium hover:text-red-600 transition-colors">Menu</a>
+            <a href="gallery-slideshow.html" class="font-medium hover:text-red-600 transition-colors">Gallery</a>
+            <a href="#contact" class="font-medium hover:text-red-600 transition-colors">Contact</a>
+            <a href="#order" class="bg-red-600 text-white px-4 py-2 rounded-md font-medium hover:bg-red-700 transition-colors text-center">Order Now</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center text-white text-center py-20 animate-background">
+        <div class="container mx-auto px-4">
+            <h1 class="brand-font text-5xl md:text-7xl mb-6 fade-in" id="hero-title">The Pitmaster's Secret</h1>
+            <p class="text-xl md:text-2xl mb-8 fade-in" id="hero-subtitle">Smokin' Good BBQ Since 1985</p>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto fade-in" id="hero-text">Experience mouth-watering, slow-smoked meats and homestyle sides that will transport you to BBQ heaven.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#menu" class="bg-red-600 text-white px-8 py-3 rounded-md font-medium hover:bg-red-700 transition-colors button-hover-animation fade-in" id="hero-btn-1">View Menu</a>
+                <a href="#order" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-md font-medium hover:bg-white hover:text-gray-900 transition-colors button-hover-animation fade-in" id="hero-btn-2">Order Online</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl brand-font text-center section-title">Our Story</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-10 md:space-y-0 md:space-x-12">
+                <div class="md:w-1/2 fade-in">
+                    <img src="assets/images/ourstory.jpg" alt="The Pitmaster's Secret Story" class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-4 bbq-secondary-text fade-in" id="about-title">From Backyard To BBQ Legend</h3>
+                    <p class="text-gray-700 mb-4 fade-in" id="about-text-1">The origin of our boldest BBQ flavors traces back to a family reunion in Tyler, Texas. That’s where the original pitmaster, Jerry Willis, felt the call. Surrounded by kin, smoke, and soul, he watched his family season their meat like it was sacred—rubbing their homemade spice blend deep into every cut before it hit the fire.</p>
+                    <p class="text-gray-700 mb-4 fade-in" id="about-text-2">Jerry returned home changed. “I’ve never tasted anything so bold,” he said. “The flavor, the aroma—it wasn’t just food. It was legacy.”</p>
+                    <p class="text-gray-700 mb-4 fade-in" id="about-text-3">That legendary dry rub became the heartbeat of our menu—applied to ribs, pork, and more. It’s the same no-shortcuts, slow-smoked magic that made Jerry a BBQ Champion. And now? It's The Pitmaster’s Secret.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl brand-font text-center section-title">Our Menu</h2>
+            
+            <!-- Menu Items -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10" id="menu-items">
+                <!-- Baby Back Ribs -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md menu-item">
+                    <img src="assets/images/menu/baby-back-ribs.png" alt="Baby Back Ribs" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-xl font-bold">Baby Back Ribs</h4>
+                            <span class="text-lg font-semibold bbq-primary-text">$30</span>
+                        </div>
+                        <button class="w-full bg-red-600 text-white px-4 py-2 rounded-md font-medium hover:bg-red-700 transition-colors add-to-order-btn" 
+                                data-name="Baby Back Ribs" 
+                                data-price="30">
+                            Add to Order
+                        </button>
+                    </div>
+                </div>
+                <!-- Chicken Quarters -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md menu-item">
+                    <img src="assets/images/menu/chicken-quarters.png" alt="Chicken Quarters" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-xl font-bold">Chicken Quarters</h4>
+                            <span class="text-lg font-semibold bbq-primary-text">$12</span>
+                        </div>
+                        <button class="w-full bg-red-600 text-white px-4 py-2 rounded-md font-medium hover:bg-red-700 transition-colors add-to-order-btn" 
+                                data-name="Chicken Quarters" 
+                                data-price="12">
+                            Add to Order
+                        </button>
+                    </div>
+                </div>
+                <!-- Hot Links -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md menu-item">
+                    <img src="assets/images/menu/hot-links.png" alt="Hot Links (Beef)" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-xl font-bold">Hot Links</h4>
+                            <span class="text-lg font-semibold bbq-primary-text">$10</span>
+                        </div>
+                        <button class="w-full bg-red-600 text-white px-4 py-2 rounded-md font-medium hover:bg-red-700 transition-colors add-to-order-btn" 
+                                data-name="Hot Links" 
+                                data-price="10">
+                            Add to Order
+                        </button>
+                    </div>
+                </div>
+                <!-- Cowboy Beans -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md menu-item">
+                    <img src="assets/images/menu/cowboy-beans.png" alt="Cowboy Beans" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-xl font-bold">Cowboy Beans</h4>
+                            <span class="text-lg font-semibold bbq-primary-text">$8</span>
+                        </div>
+                        <button class="w-full bg-red-600 text-white px-4 py-2 rounded-md font-medium hover:bg-red-700 transition-colors add-to-order-btn" 
+                                data-name="Cowboy Beans" 
+                                data-price="8">
+                            Add to Order
+                        </button>
+                    </div>
+                </div>
+                <!-- Corn -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md menu-item">
+                    <img src="assets/images/menu/corn.png" alt="Roasted Corn" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-xl font-bold">Corn</h4>
+                            <span class="text-lg font-semibold bbq-primary-text">$8</span>
+                        </div>
+                        <button class="w-full bg-red-600 text-white px-4 py-2 rounded-md font-medium hover:bg-red-700 transition-colors add-to-order-btn" 
+                                data-name="Corn" 
+                                data-price="8">
+                            Add to Order
+                        </button>
+                    </div>
+                </div>
+                <!-- Lone Ranger -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md menu-item">
+                    <img src="assets/images/menu/lone-ranger.png" alt="Lone Ranger" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-xl font-bold">Lone Ranger</h4>
+                            <span class="text-lg font-semibold bbq-primary-text">$40</span>
+                        </div>
+                        <button class="w-full bg-red-600 text-white px-4 py-2 rounded-md font-medium hover:bg-red-700 transition-colors add-to-order-btn" 
+                                data-name="Lone Ranger" 
+                                data-price="40">
+                            Add to Order
+                        </button>
+                    </div>
+                </div>
+                <!-- Maverick -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md menu-item">
+                    <img src="assets/images/menu/maverick.png" alt="Maverick" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-xl font-bold">Maverick</h4>
+                            <span class="text-lg font-semibold bbq-primary-text">$60</span>
+                        </div>
+                        <button class="w-full bg-red-600 text-white px-4 py-2 rounded-md font-medium hover:bg-red-700 transition-colors add-to-order-btn" 
+                                data-name="Maverick" 
+                                data-price="60">
+                            Add to Order
+                        </button>
+                    </div>
+                </div>
+                <!-- Bandits Bounty -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md menu-item">
+                    <img src="assets/images/menu/bandits-bounty.png" alt="Bandits Bounty" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-xl font-bold">Bandit's Bounty</h4>
+                            <span class="text-lg font-semibold bbq-primary-text">$110</span>
+                        </div>
+                        <button class="w-full bg-red-600 text-white px-4 py-2 rounded-md font-medium hover:bg-red-700 transition-colors add-to-order-btn" 
+                                data-name="Bandit's Bounty" 
+                                data-price="110">
+                            Add to Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl brand-font text-center section-title">Gallery</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10" id="gallery-grid">
+                <img src="assets/images/gallery/gallery_1.jpg" alt="Gallery Image 1" class="w-full h-64 object-cover rounded-lg shadow-md gallery-item">
+                <img src="assets/images/gallery/gallery_2.jpg" alt="Gallery Image 2" class="w-full h-64 object-cover rounded-lg shadow-md gallery-item">
+                <img src="assets/images/gallery/gallery_3.jpg" alt="Gallery Image 3" class="w-full h-64 object-cover rounded-lg shadow-md gallery-item">
+                <img src="assets/images/gallery/gallery_4.jpg" alt="Gallery Image 4" class="w-full h-64 object-cover rounded-lg shadow-md gallery-item">
+            </div>
+            <!-- View Full Gallery Slideshow Button -->
+            <div class="text-center mt-12">
+                <a href="gallery.html" class="bbq-primary text-white px-8 py-3 rounded-md font-medium hover:bg-red-700 transition-colors button-hover-animation pulse fade-in">View Full Gallery Slideshow</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl brand-font text-center section-title">What Customers Say</h2>
+            <div class="max-w-4xl mx-auto mt-10 text-center">
+                <p class="text-gray-700 mb-8 fade-in">
+                    Our founder, Jerry Willis, shares a special moment with one of our cherished customers. This is what The Pitmaster's Secret is all about: good food and great company.
+                </p>
+                <div class="rounded-lg overflow-hidden shadow-lg mx-auto mb-10">
+                    <video controls class="w-full">
+                        <source src="assets/videos/MOV_2769.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <!-- Customer Images -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                    <div class="rounded-lg overflow-hidden shadow-lg">
+                        <img src="photo_1_2025-08-23_08-40-03.jpg" alt="Happy Customer 1" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="rounded-lg overflow-hidden shadow-lg">
+                        <img src="photo_2_2025-08-23_08-40-03.jpg" alt="Happy Customer 2" class="w-full h-64 object-cover">
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-600">5.0</span>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"The Pitmaster's Secret ribs is the best I've ever had. It's so tender it practically melts in your mouth. Their homemade seasoning is to die for!"</p>
+                    <div class="flex items-center">
+                        <img src="photo_2_2025-08-23_08-40-03.jpg" alt="Sarah Johnson" class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-3">
+                            <p class="font-bold">Sarah Johnson</p>
+                            <p class="text-gray-600 text-sm">Local Resident</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-600">5.0</span>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"The ribs are fall-off-the-bone tender and the sides are amazing. Great service too!"</p>
+                    <div class="flex items-center">
+                        <img src="photo_1_2025-08-23_08-40-03.jpg" alt="Michael Rodriguez" class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-3">
+                            <p class="font-bold">Michael Rodriguez</p>
+                            <p class="text-gray-600 text-sm">BBQ Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-gray-600">4.5</span>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"We had The Pitmaster's Secret cater our company event and everyone raved about it! The food was a crowd favorite and the service was excellent."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-600">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="ml-3">
+                            <p class="font-bold">Jennifer Wilson</p>
+                            <p class="text-gray-600 text-sm">Event Planner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Ordering Section -->
+    <section id="order" class="py-20 bg-gray-800 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl brand-font text-center section-title text-white">Order Online</h2>
+            <div class="max-w-2xl mx-auto mt-10">
+                <div class="bg-white p-8 rounded-lg shadow-lg text-gray-800 fade-in" id="order-form">
+                    <h3 class="text-2xl font-bold mb-6 text-center">Quick Order Form</h3>
+                    
+                    <!-- Order Summary -->
+                    <div id="order-summary" class="mb-6 p-4 bg-gray-50 rounded-lg" style="display: none;">
+                        <h4 class="text-lg font-bold mb-3">Your Order</h4>
+                        <div id="order-items"></div>
+                        <div class="border-t pt-3 mt-3">
+                            <div class="flex justify-between items-center text-lg font-bold">
+                                <span>Total:</span>
+                                <span id="order-total">$0.00</span>
+                            </div>
+                        </div>
+                        <button type="button" id="clear-order" class="mt-3 text-red-600 hover:text-red-800 text-sm">Clear Order</button>
+                    </div>
+                    
+                    <form action="https://formspree.io/f/mrbqjqzn" method="POST">
+                        <input type="hidden" id="order-items-input" name="order_items" value="">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="phone" class="block text-gray-700 font-bold mb-2">Phone</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="(480) 798-7706" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="delivery-time" class="block text-gray-700 font-bold mb-2">Requested Delivery Time</label>
+                            <input type="time" id="delivery-time" name="delivery_time" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600" required>
+                        </div>
+                        <div id="delivery-options" class="mt-6">
+                            <label for="delivery-address" class="block text-gray-700 font-bold mb-2">Delivery Address</label>
+                            <input type="text" id="delivery-address" name="delivery_address" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="Enter your delivery address" required>
+                            <button type="button" id="calculate-fee-btn" class="w-full bg-red-600 text-white px-4 py-2 rounded-md font-medium hover:bg-red-700 transition-colors mt-4">Calculate Delivery Fee</button>
+                            <div id="delivery-fee-result" class="mt-4 text-lg font-bold text-center"></div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="special-instructions" class="block text-gray-700 font-bold mb-2">Special Instructions</label>
+                            <textarea id="special-instructions" name="special_instructions" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600" rows="3" placeholder="Any special requests?"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 px-4 bg-red-600 text-white font-bold rounded-md hover:bg-red-700 transition-colors button-hover-animation">Submit Order</button>
+                        <div id="order-form-status" class="mt-4"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl brand-font text-center section-title">Contact Us</h2>
+            <div class="flex flex-col md:flex-row gap-10 mt-10">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-6 bbq-secondary-text fade-in" id="contact-title">Get in Touch</h3>
+                    <p class="text-gray-700 mb-6 fade-in" id="contact-text">Have questions or feedback? We'd love to hear from you! Fill out the form and our team will get back to you as soon as possible.</p>
+                    
+                    <div class="mb-8 fade-in" id="contact-info-1">
+                        <h4 class="font-bold text-lg mb-3">Contact Information</h4>
+                        <p class="text-gray-700 mb-2"><i class="fas fa-phone-alt mr-2 bbq-primary-text"></i> (480) 798-7706</p>
+                        <p class="text-gray-700 mb-2"><i class="fas fa-envelope mr-2 bbq-primary-text"></i> jj.willis@pitmasters-secret.com</p>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <form class="bg-white p-6 rounded-lg shadow-md fade-in" id="contact-form" action="https://formspree.io/f/mrbqjqzn" method="POST">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="contact-name" class="block text-gray-700 font-bold mb-2">Name</label>
+                                <input type="text" id="contact-name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="Your Name" required>
+                            </div>
+                            <div>
+                                <label for="contact-email" class="block text-gray-700 font-bold mb-2">Email</label>
+                                <input type="email" id="contact-email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <label for="contact-phone" class="block text-gray-700 font-bold mb-2">Phone</label>
+                            <input type="tel" id="contact-phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="(480) 798-7706">
+                        </div>
+                        <div class="mt-6">
+                            <label for="contact-subject" class="block text-gray-700 font-bold mb-2">Subject</label>
+                            <select id="contact-subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600" required>
+                                <option value="">Select a Subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="catering">Catering Quote</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="career">Careers</option>
+                            </select>
+                        </div>
+                        <div class="mt-6">
+                            <label for="contact-message" class="block text-gray-700 font-bold mb-2">Message</label>
+                            <textarea id="contact-message" name="message" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600" rows="4" placeholder="Type your message here..." required></textarea>
+                        </div>
+                        <div class="mt-6">
+                            <button type="submit" class="w-full py-3 px-4 bg-red-600 text-white font-bold rounded-md hover:bg-red-700 transition-colors button-hover-animation">Send Message</button>
+                        </div>
+                        <div id="contact-form-status" class="mt-4"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="md:w-1/3 mb-8 md:mb-0">
+                    <h2 class="brand-font text-3xl mb-4 fade-in" id="footer-brand">The Pitmaster's Secret</h2>
+                    <p class="mb-4 text-gray-400 fade-in" id="footer-text">Authentic Texas-style BBQ served with passion since 1985. Our commitment to quality never wavers.</p>
+                    <div class="flex space-x-4 fade-in" id="footer-social">
+                        <a href="#" class="text-2xl text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-2xl text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-2xl text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-2xl text-gray-400 hover:text-white"><i class="fab fa-yelp"></i></a>
+                    </div>
+                </div>
+                <div class="md:w-1/3 mb-8 md:mb-0">
+                    <h3 class="text-xl font-bold mb-4 fade-in" id="footer-links-title">Quick Links</h3>
+                    <ul class="space-y-2 fade-in" id="footer-links">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#menu" class="text-gray-400 hover:text-white">Menu</a></li>
+                        <li><a href="#order" class="text-gray-400 hover:text-white">Order Online</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Catering</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="md:w-1/3">
+                    <h3 class="text-xl font-bold mb-4 fade-in" id="footer-newsletter-title">Newsletter</h3>
+                    <p class="mb-4 text-gray-400 fade-in" id="footer-newsletter-text">Subscribe to get special offers, free giveaways, and news.</p>
+                    <form class="fade-in" id="footer-form">
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-md focus:outline-none text-gray-900">
+                            <button type="button" class="bg-red-600 px-4 py-2 rounded-r-md hover:bg-red-700 transition-colors button-hover-animation">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-6 text-center text-gray-400 fade-in" id="footer-copyright">
+                <p>&copy; 2023 The Pitmaster's Secret. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <button class="chatbot-button bg-red-600 text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center pulse" id="chatbot-toggle">
+        <i class="fas fa-comments text-2xl"></i>
+    </button>
+    
+    <div class="chatbot-container" id="chatbot">
+        <div class="chat-header flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-robot mr-2"></i>
+                <span>The Pitmaster's Secret Assistant</span>
+            </div>
+            <button id="close-chat" class="text-white">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot-message">
+                <p>👋 Hi there! I'm The Pitmaster's Secret virtual assistant. I can help you with menu information, show images of our dishes, make reservations, or answer any questions about The Pitmaster's Secret!</p>
+            </div>
+            <div class="message bot-message">
+                <p>What can I help you with today?</p>
+            </div>
+        </div>
+        <div class="chat-input">
+            <div class="flex">
+                <input type="text" id="user-input" placeholder="Type your message..." class="w-full px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none">
+                <button id="send-message" class="bg-red-600 px-4 py-2 text-white rounded-r-md hover:bg-red-700 transition-colors button-hover-animation">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+</body>
+</html>
